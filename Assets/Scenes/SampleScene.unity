@@ -225,7 +225,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 0.3
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -352,21 +352,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 72f8939f5232c694c8b04649c065b7a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 72f8939f5232c694c8b04649c065b7a0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.676515
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 72f8939f5232c694c8b04649c065b7a0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.72473854
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 72f8939f5232c694c8b04649c065b7a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 72f8939f5232c694c8b04649c065b7a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.374
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 72f8939f5232c694c8b04649c065b7a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -491,7 +495,7 @@ GameObject:
   - component: {fileID: 1272968219}
   - component: {fileID: 1272968218}
   m_Layer: 0
-  m_Name: Background_0
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,8 +569,8 @@ Transform:
   m_GameObject: {fileID: 1272968217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0052, y: 0.0002, z: 0}
-  m_LocalScale: {x: 0.29362896, y: 0.22435266, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1666665, y: 1.1666665, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
