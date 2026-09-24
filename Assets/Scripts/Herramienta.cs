@@ -7,7 +7,8 @@ namespace herramientas.conectividad {
         public int vida;
         public int calculoPuntaje()
         {
-
-        } 
+            int puntaje = contador * vida;
+            return puntaje;
+        }
     }
 }
