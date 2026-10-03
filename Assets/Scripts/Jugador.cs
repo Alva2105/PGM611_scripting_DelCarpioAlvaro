@@ -16,6 +16,10 @@ public class Jugador : MonoBehaviour
     private int cantAbejas = 0;
     public TMP_Text textoAbejas;
     private bool enRetroceso = false;
+    public AudioSource audioSource;
+    public AudioClip audioPuerquito;
+    public AudioClip audioCaracol;
+    public AudioClip audioAbeja;
 
     void Start()
     {
@@ -47,16 +51,19 @@ public class Jugador : MonoBehaviour
     {
         if (collision.transform.CompareTag("abejita"))
         {
+            audioSource.PlayOneShot(audioAbeja);
             Destroy(collision.gameObject);
             cantAbejas++;
             textoAbejas.text = "" + cantAbejas;
         }
         if (collision.transform.CompareTag("puerquito"))
         {
+            audioSource.PlayOneShot(audioPuerquito);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         if (collision.transform.CompareTag("caracol"))
         {
+            audioSource.PlayOneShot(audioCaracol);
             enRetroceso = true;
             Vector2 arrastre = (rb.position - (Vector2)collision.transform.position).normalized * 3;
             rb.linearVelocity = Vector2.zero;
