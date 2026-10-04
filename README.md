@@ -5,7 +5,9 @@ Videojuego de plataformas 2D en etapa inicial, desarrollado en Unity siguiendo l
 ## Requisitos
 
 - Unity **6000.3.16f1** (Unity 6.3 LTS) con Universal 2D
-- Escena principal: `Assets/Scenes/SampleScene.unity`
+- Escenas (en este orden en Build Profiles):
+  1. `Assets/Scenes/MenuPrincipal.unity`: menú inicial
+  2. `Assets/Scenes/SampleScene.unity`: nivel de juego
 
 ## Controles
 
@@ -21,12 +23,18 @@ Videojuego de plataformas 2D en etapa inicial, desarrollado en Unity siguiendo l
 - **Cámara** que sigue al personaje (`Assets/Scripts/Camara.cs`).
 - Piso con Tilemap y colisiones, salto con detección de piso.
 - Enemigos (puerquitos) y zona de caída que reinician el nivel.
+- **Pisotón:** al saltar sobre un caracol, este muere con su animación y empuja al jugador.
+- **Sonido:** música de fondo en loop y efectos al recoger abejas, tocar puerquitos y pisar caracoles.
+- **Menú inicial** con botones Play, Options (abre un panel de opciones) y Exit.
 
 ## Scripts
 
 - `Assets/Scripts/Jugador.cs`: movimiento, salto, animaciones, recolección y reinicio del nivel.
 - `Assets/Scripts/Camara.cs`: seguimiento de la cámara.
+- `Assets/Scripts/OpcionesMenu.cs`: acciones de los botones del menú (jugar y salir).
 
 ## Recursos
 
-Sprites: [Legacy Fantasy - High Forest (anokolisa)](https://anokolisa.itch.io/sidescroller-pixelart-sprites-asset-pack-forest-16x16)
+- Sprites: [Legacy Fantasy - High Forest (anokolisa)](https://anokolisa.itch.io/sidescroller-pixelart-sprites-asset-pack-forest-16x16)
+- Audio: [Minifantasy - Dungeon Audio Pack (Leohpaz)](https://leohpaz.itch.io/minifantasy-dungeon-sfx-pack)
+- Botones: [UI Button Mega Pack (_Cruuz)](https://csmikelandre.itch.io/uibutton-megapack-84pngs)
