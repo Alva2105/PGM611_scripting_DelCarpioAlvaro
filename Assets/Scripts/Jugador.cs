@@ -16,6 +16,7 @@ public class Jugador : MonoBehaviour
     private int cantAbejas = 0;
     public TMP_Text textoAbejas;
     private bool enRetroceso = false;
+    private bool recibioDanio = false;
     public AudioSource audioSource;
     public AudioClip audioPuerquito;
     public AudioClip audioCaracol;
@@ -56,10 +57,13 @@ public class Jugador : MonoBehaviour
             cantAbejas++;
             textoAbejas.text = "" + cantAbejas;
         }
-        if (collision.transform.CompareTag("puerquito"))
+        if (collision.transform.CompareTag("puerquito") && !recibioDanio)
         {
+            recibioDanio = true;
             audioSource.PlayOneShot(audioPuerquito);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            enRetroceso = true; // bloquea el movimiento mientras suena el daño
+            rb.linearVelocity = Vector2.zero;
+            Invoke(nameof(ReiniciarNivel), 0.6f); // espera para que el sonido se escuche
         }
         if (collision.transform.CompareTag("caracol"))
         {
@@ -79,6 +83,11 @@ public class Jugador : MonoBehaviour
 
     void QuitarRetroceso()
     {
-        enRetroceso = false;
+        if (!recibioDanio) enRetroceso = false;
+    }
+
+    void ReiniciarNivel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
